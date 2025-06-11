@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Explorer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f8fb;
+            color: #222;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+            color: #fff;
+            padding: 80px 0 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 1;
+        }
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.3rem;
+            margin: 0 0 30px 0;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            overflow: hidden;
+            width: 320px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px) scale(1.03);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 18px;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            margin: 0 0 8px 0;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0 15px 0;
+            background: #222;
+            color: #fff;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .destinations {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Explorer</h1>
+        <p>Discover your next adventure. Explore the world with us!</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Tours</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:30px;">Popular Destinations</h2>
+        <div class="destinations">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=800&q=80" alt="Paris">
+                <div class="card-body">
+                    <div class="card-title">Paris, France</div>
+                    <div class="card-text">Experience the romance of the City of Lights, from the Eiffel Tower to charming cafes.</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+                <div class="card-body">
+                    <div class="card-title">Tokyo, Japan</div>
+                    <div class="card-text">Dive into a vibrant city blending tradition and technology, with amazing cuisine and culture.</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Maldives">
+                <div class="card-body">
+                    <div class="card-title">Maldives</div>
+                    <div class="card-text">Relax on pristine beaches and swim in crystal-clear waters in this tropical paradise.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Travel Explorer. All rights reserved.
+    </footer>
+</body>
+</html>
